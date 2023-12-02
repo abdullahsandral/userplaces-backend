@@ -37,7 +37,7 @@ app.use('/api/places', placesRoutes);
 app.use((req, res, next) => {
   next(new HttpError('This Route DoesNot Exist on SERVER', 404));
 });
-console.log('Process : ', process.env.CLOUD_NAME);
+
 app.use((error, req, res, next) => {
   // if(req.file)  { fileSystem.unlink(req.file.path, err => console.log(err)); }
 
