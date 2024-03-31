@@ -5,6 +5,7 @@ const { DB_NAME, DB_USERNAME, DB_PASSWORD, DB_URL } = process.env;
 module.exports = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
   host: DB_URL,
   dialect: 'mysql',
+  dialectModule: require('mysql2'),
   operatorsAliases: 0,
 
   pool: {
